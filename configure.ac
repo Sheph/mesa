@@ -2210,6 +2210,7 @@ AC_CONFIG_FILES([Makefile
 		src/gallium/targets/dri-ilo/Makefile
 		src/gallium/targets/dri-nouveau/Makefile
 		src/gallium/targets/dri-swrast/Makefile
+		src/gallium/targets/graw-xlib/Makefile
 		src/gallium/targets/dri-vmwgfx/Makefile
 		src/gallium/targets/egl-static/Makefile
 		src/gallium/targets/gbm/Makefile
@@ -2230,6 +2231,7 @@ AC_CONFIG_FILES([Makefile
 		src/gallium/targets/xvmc/Makefile
 		src/gallium/tests/trivial/Makefile
 		src/gallium/tests/unit/Makefile
+		src/gallium/tests/graw/Makefile
 		src/gallium/winsys/Makefile
 		src/gallium/winsys/freedreno/drm/Makefile
 		src/gallium/winsys/i915/drm/Makefile

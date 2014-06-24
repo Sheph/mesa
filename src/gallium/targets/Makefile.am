@@ -113,6 +113,7 @@ endif
 if HAVE_GALLIUM_SOFTPIPE
 if HAVE_DRISW
 SUBDIRS += dri-swrast
+SUBDIRS += graw-xlib
 endif
 endif
 

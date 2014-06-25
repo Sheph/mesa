@@ -840,6 +840,8 @@ GALLIUM_WINSYS_DIRS="sw"
 GALLIUM_DRIVERS_DIRS="galahad trace rbug noop identity"
 GALLIUM_STATE_TRACKERS_DIRS=""
 
+NEED_WINSYS_XLIB="yes"
+
 case "x$enable_glx$enable_xlib_glx" in
 xyesyes)
     GALLIUM_WINSYS_DIRS="$GALLIUM_WINSYS_DIRS sw/xlib"
@@ -1775,9 +1777,9 @@ AC_SUBST([XVMC_LIB_INSTALL_DIR])
 dnl
 dnl Gallium Tests
 dnl
-if test "x$enable_gallium_tests" = xyes; then
-    enable_gallium_loader=yes
-fi
+dnl if test "x$enable_gallium_tests" = xyes; then
+dnl     enable_gallium_loader=yes
+dnl fi
 AM_CONDITIONAL(HAVE_GALLIUM_TESTS, test "x$enable_gallium_tests" = xyes)
 
 if test "x$enable_gallium_loader" = xyes; then

@@ -36,7 +36,4 @@ AM_CPPFLAGS = \
 noinst_LTLIBRARIES = libgraw.la
 
 libgraw_la_SOURCES = \
-	graw_xlib.c graw_util.c \
-	$(top_srcdir)/src/mesa/drivers/dri/common/utils.c \
-	$(top_srcdir)/src/mesa/drivers/dri/common/dri_util.c \
-	$(top_srcdir)/src/mesa/drivers/dri/common/xmlconfig.c
+	graw_xlib.c graw_util.c

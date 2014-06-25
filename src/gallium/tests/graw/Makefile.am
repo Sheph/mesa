@@ -14,7 +14,12 @@ LDADD = \
 	$(top_builddir)/src/gallium/drivers/softpipe/libsoftpipe.la \
 	$(top_builddir)/src/gallium/drivers/trace/libtrace.la \
 	$(top_builddir)/src/gallium/drivers/rbug/librbug.la \
-	$(GALLIUM_DRI_LIB_DEPS) \
+	$(top_builddir)/src/gallium/auxiliary/libgallium.la \
+	$(SELINUX_LIBS) \
+	$(LIBDRM_LIBS) \
+	$(EXPAT_LIBS) \
+	$(GALLIUM_COMMON_LIB_DEPS) \
+	$(LLVM_LIBS) \
 	$(top_builddir)/src/gallium/drivers/llvmpipe/libllvmpipe.la \
 	-lX11 -lXext
 

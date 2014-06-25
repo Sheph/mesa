@@ -55,8 +55,6 @@ SUBDIRS +=			\
 
 if HAVE_GALLIUM_TESTS
 SUBDIRS +=			\
-	gallium/tests/trivial	\
-	gallium/tests/unit	\
 	gallium/tests/graw
 endif
 endif

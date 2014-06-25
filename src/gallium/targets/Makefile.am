@@ -60,6 +60,7 @@ if HAVE_GALLIUM_FREEDRENO
 if HAVE_DRI2
 SUBDIRS += dri-freedreno
 endif
+SUBDIRS += graw-freedreno
 endif
 
 if HAVE_GALLIUM_I915
@@ -114,6 +115,7 @@ if HAVE_GALLIUM_SOFTPIPE
 if HAVE_DRISW
 SUBDIRS += dri-swrast
 endif
+SUBDIRS += graw-xlib
 endif
 
 if NEED_GALLIUM_LOADER
@@ -123,5 +125,3 @@ endif
 if HAVE_GALLIUM_EGL
 SUBDIRS += egl-static
 endif
-
-SUBDIRS += graw-xlib

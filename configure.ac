@@ -2213,6 +2213,7 @@ AC_CONFIG_FILES([Makefile
 		src/gallium/targets/dri-nouveau/Makefile
 		src/gallium/targets/dri-swrast/Makefile
 		src/gallium/targets/graw-xlib/Makefile
+		src/gallium/targets/graw-freedreno/Makefile
 		src/gallium/targets/dri-vmwgfx/Makefile
 		src/gallium/targets/egl-static/Makefile
 		src/gallium/targets/gbm/Makefile

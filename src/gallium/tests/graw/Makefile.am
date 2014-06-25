@@ -8,6 +8,19 @@ AM_CPPFLAGS = \
 	-I$(top_srcdir)/src/gallium/winsys \
 	-DGALLIUM_LLVMPIPE
 
+if HAVE_GALLIUM_FREEDRENO
+LDADD = \
+	$(top_builddir)/src/gallium/targets/graw-freedreno/libgraw.la \
+	$(top_builddir)/src/gallium/drivers/freedreno/libfreedreno.la \
+	$(top_builddir)/src/gallium/drivers/trace/libtrace.la \
+	$(top_builddir)/src/gallium/drivers/rbug/librbug.la \
+	$(top_builddir)/src/gallium/auxiliary/libgallium.la \
+	$(SELINUX_LIBS) \
+	$(LIBDRM_LIBS) \
+	$(EXPAT_LIBS) \
+	$(GALLIUM_COMMON_LIB_DEPS) \
+	-lX11 -lXext
+else
 LDADD = \
 	$(top_builddir)/src/gallium/targets/graw-xlib/libgraw.la \
 	$(top_builddir)/src/gallium/winsys/sw/xlib/libws_xlib.la \
@@ -22,6 +35,7 @@ LDADD = \
 	$(LLVM_LIBS) \
 	$(top_builddir)/src/gallium/drivers/llvmpipe/libllvmpipe.la \
 	-lX11 -lXext
+endif
 
 noinst_PROGRAMS = clear disasm fs-fragcoord fs-frontface fs-test \
                   fs-write-z gs-test occlusion-query quad-sample \
